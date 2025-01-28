@@ -858,7 +858,7 @@
         },
         "optional": true
       },
-      "usrename": {
+      "username": {
         "type": "objectAttribute",
         "value": {
           "type": "string"

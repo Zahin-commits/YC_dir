@@ -11,3 +11,26 @@ export const  STARTUPS_QUERY = defineQuery(`*[_type=="startup" && defined(slug.c
     image,
     category
 }`)
+
+export const STARTUP_BY_ID_QUERY = defineQuery(`*[_type=="startup" && _id == $id][0]{
+  _id,
+  title,
+    slug,
+    _createdAt,
+    category,
+  author->{
+    _id,name,username,image,bio
+  },
+  views,
+  description,
+    image,
+    pitch
+}`)
+
+export const  STARTUP_view_QUERY = defineQuery(`*[_type=="startup" && _id == $id]{
+ _id, views
+}`)
+
+export const  AUTHOR_BY_GITHUB_ID_QUERY = defineQuery(`*[_type=="author" && _id == $id][0]{
+ _id, id, name, username, email, image, bio
+}`)

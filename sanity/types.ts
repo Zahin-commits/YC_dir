@@ -160,7 +160,7 @@ export type Author = {
   _rev: string;
   id?: number;
   name?: string;
-  usrename?: string;
+  username?: string;
   email?: string;
   iamge?: string;
   bio?: string;
